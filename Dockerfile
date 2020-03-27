@@ -6,3 +6,4 @@ WORKDIR /app
 COPY . /app
 
 RUN apk add zsh git
+RUN npm install -g gatsby-cli
