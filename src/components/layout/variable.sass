@@ -4,3 +4,24 @@ $paragraph: #2D334A
 $background: #fffffe
 $button: #ffd803
 $button-text: #272343
+
+$sm: 576px // smartphone
+$md: 768px // tablet
+$lg: 992px // pc
+$xl: 1200px // pc
+
+@mixin sm
+  @media (min-width: ($sm))
+    @content
+
+@mixin md
+  @media (min-width: ($md))
+    @content
+
+@mixin lg
+  @media (min-width: ($lg))
+    @content
+
+@mixin xl
+  @media (min-width: ($xl))
+    @content

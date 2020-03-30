@@ -8,6 +8,11 @@ body
   color: $paragraph
   margin: 0
 
+
+  @include md
+    max-width: $md // PCのときにずれてしまう
+    margin: 0 auto // PCのときにずれてしまう
+
   h1
     color: $headline
 
