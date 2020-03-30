@@ -14,6 +14,7 @@ collections:
     fields:
       - { name: slug, label: slug }
       - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { name: published_date, label: 投稿日, widget: date }
+      - { name: updated_date, label: 更新日時, widget: date }
+      - { name: title, label: 記事タイトル }
+      - { name: body, label: 本文, widget: markdown }
