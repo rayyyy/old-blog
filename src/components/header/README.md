@@ -37,7 +37,6 @@ SEO的なところ
 [プラグイン45選](https://qiita.com/Takumon/items/da8347f81a9f021b637f#gatsby-plugin-robots-txt)
 
 ## やること 優先度高い順
-* CSSのカスタムプロパティ実装
 * レスポンシブデザイン
 * 記事の情報を全部出す更新日時まで
 * tag
