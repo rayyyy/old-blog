@@ -38,11 +38,14 @@ SEO的なところ
 
 ## やること 優先度高い順
 * CSSのカスタムプロパティ実装
+* レスポンシブデザイン
+* 記事の情報を全部出す更新日時まで
 * tag
-* RSS feed
 * noto sans追加
   * https://blog.freks.jp/start-gatsby-blog/
   * https://anyushu.com/web/fonts-osusume/
+* WP移行
+* RSS feed
 
 
 ## やってみたいところ
