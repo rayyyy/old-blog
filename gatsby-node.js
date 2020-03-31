@@ -6,6 +6,25 @@
 
 // You can delete this file if you're not using it
 
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === 'MarkdownRemark') {
+    const relativeFilePath = createFilePath({
+      node,
+      getNode,
+      basePath: 'src/pages/blog',
+    })
+
+    createNodeField({
+      node,
+      name: 'path',
+      value: `${relativeFilePath}`,
+    })
+  }
+}
+
 const path = require(`path`)
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
@@ -16,12 +35,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
+        sort: { order: DESC, fields: [frontmatter___updated_date] }
         limit: 1000
       ) {
         edges {
           node {
-            frontmatter {
+            fields {
               path
             }
           }
@@ -37,8 +56,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+
     createPage({
-      path: node.frontmatter.path,
+      path: node.fields.path,
       component: blogPostTemplate,
       context: {}, // additional data can be passed via context
     })

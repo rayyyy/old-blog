@@ -13,7 +13,6 @@ collections:
     slug: "{{year}}/{{month}}/{{day}}/{{fields.slug}}"
     fields:
       - { name: slug, label: slug }
-      - { name: path, label: Path }
       - { name: published_date, label: 投稿日, widget: date }
       - { name: updated_date, label: 更新日時, widget: date }
       - { name: title, label: 記事タイトル }
