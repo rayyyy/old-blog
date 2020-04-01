@@ -37,7 +37,6 @@ SEO的なところ
 [プラグイン45選](https://qiita.com/Takumon/items/da8347f81a9f021b637f#gatsby-plugin-robots-txt)
 
 ## やること 優先度高い順
-* 記事の情報を全部出す更新日時まで
 * tag
 * noto sans追加
   * https://blog.freks.jp/start-gatsby-blog/
