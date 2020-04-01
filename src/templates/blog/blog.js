@@ -16,6 +16,7 @@ export default function Template({
           <h1>{frontmatter.title}</h1>
           <p>{frontmatter.published_date}</p>
           <p>{frontmatter.updated_date}</p>
+          <p>{frontmatter.tags}</p>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
@@ -34,6 +35,7 @@ export const pageQuery = graphql`
         published_date(formatString: "MMMM DD, YYYY")
         updated_date(formatString: "MMMM DD, YYYY")
         title
+        tags
       }
     }
   }
