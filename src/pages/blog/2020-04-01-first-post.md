@@ -1,5 +1,5 @@
 ---
-slug: first-post
+slug: gatsby-renewal
 published_date: 2020-04-01T02:12:51.713Z
 updated_date: 2020-04-01T02:12:51.746Z
 title: Gatsbyjsでブログを作り直しました！
