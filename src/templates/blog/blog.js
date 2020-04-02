@@ -1,7 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../../components/layout/layout"
+import Layout from "../../templates/layout/layout"
+import PostDate from "../../components/organisms/post-date/post-date"
 import './blog.sass'
 
 export default function Template({
@@ -14,8 +15,10 @@ export default function Template({
       <div className="blog-post-container">
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
-          <p>{frontmatter.published_date}</p>
-          <p>{frontmatter.updated_date}</p>
+          <PostDate
+            published_date={frontmatter.published_date}
+            updated_date={frontmatter.updated_date}
+          ></PostDate>
           <p>{frontmatter.tags}</p>
           <div
             className="blog-post-content"
@@ -32,8 +35,8 @@ export const pageQuery = graphql`
     markdownRemark(fields: { path: { eq: $path } }) {
       html
       frontmatter {
-        published_date(formatString: "MMMM DD, YYYY")
-        updated_date(formatString: "MMMM DD, YYYY")
+        published_date(formatString: "YYYY年MM月DD日")
+        updated_date(formatString: "YYYY年MM月DD日")
         title
         tags
       }

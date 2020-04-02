@@ -1,6 +1,6 @@
 import React from "react"
-import PostLink from "../components/post-link"
-import Layout from "../components/layout/layout"
+import PostLink from "../components/molecules/post-link"
+import Layout from "../templates/layout/layout"
 
 const IndexPage = ({
   data: {

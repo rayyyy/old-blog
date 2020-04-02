@@ -37,9 +37,6 @@ SEO的なところ
 [プラグイン45選](https://qiita.com/Takumon/items/da8347f81a9f021b637f#gatsby-plugin-robots-txt)
 
 ## やること 優先度高い順
-* noto sans追加
-  * https://blog.freks.jp/start-gatsby-blog/
-  * https://anyushu.com/web/fonts-osusume/
 * WP移行
 * UIを整える
 * RSS feed
