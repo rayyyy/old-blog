@@ -1,7 +1,7 @@
 ---
 slug: introduction-to-statistics3
-published_date: 2018-09-29T15:00:00.000Z
-updated_date: 2018-09-29T15:00:00.000Z
+published_date: 2018-09-21T15:00:00.000Z
+updated_date: 2018-09-21T15:00:00.000Z
 title: 統計学入門 その3 Pythonを使った分析
 tags:
   - Python
