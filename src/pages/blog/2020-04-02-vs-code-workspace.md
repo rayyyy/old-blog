@@ -1,7 +1,7 @@
 ---
 slug: vs-code-workspace
-published_date: 2020-04-02T15:15:00.072Z
-updated_date: 2020-04-02T15:15:00.105Z
+published_date: 2018-02-25T15:00:00.000Z
+updated_date: 2018-02-25T15:00:00.000Z
 title: VS Codeでワークスペースごとに設定を変える
 tags:
   - VS Code
