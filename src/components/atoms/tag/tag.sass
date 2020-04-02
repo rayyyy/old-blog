@@ -1,8 +1,14 @@
-@import '../../../templates/layout/variable'
+@import "../../../templates/layout/variable"
 
 .tag
   background: $button
-  text-align: center
-  margin: 0 auto
-  padding: 5px 5px
+  color: $button-text
+  display: inline-block
   border-radius: 30px
+  padding: 5px 10px
+  text-decoration: none
+  transition: .2s
+
+.tag:hover
+  background: $button-text
+  color: $button

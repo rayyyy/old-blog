@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../../templates/layout/layout"
 import PostDate from "../../components/organisms/post-date/post-date"
-import Tag from "../../components/atoms/tag/tag"
+import Tags from "../../components/molecules/tags/tags"
 import './blog.sass'
 
 export default function Template({
@@ -20,8 +20,7 @@ export default function Template({
             published_date={frontmatter.published_date}
             updated_date={frontmatter.updated_date}
           ></PostDate>
-          <Tag text="ssss" />
-          <p>{frontmatter.tags}</p>
+          <Tags tags={frontmatter.tags} />
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}

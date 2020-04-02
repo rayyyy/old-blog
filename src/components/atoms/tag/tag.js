@@ -1,9 +1,9 @@
 import React from "react"
 import "./tag.sass"
 
-const Tag = ({ text }) => (
-  <a className="tag">
-    {text}
+const Tag = ({ name }) => (
+  <a href="/" className="tag">
+    {name}
   </a>
 )
 
