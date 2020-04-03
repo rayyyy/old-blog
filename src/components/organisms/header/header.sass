@@ -1,17 +1,17 @@
 @import '../../../templates/layout/variable'
 
 header
-  height: 64px
-  display: flex
-  align-items: center
-
   @include md
-    max-width: $md // PCのときにずれてしまう
-    margin: 0 auto // PCのときにずれてしまう
+    margin: 0 auto    // PCのときにずれてしまう
+    max-width: $md    // PCのときにずれてしまう
+
+  align-items: center
+  display: flex
+  height: 64px
 
 .site-title
-  margin-left: 16px
+  color: $headline
   font-size: 20px
   font-weight: bold
-  color: $headline
+  margin-left: 16px
   text-decoration: none

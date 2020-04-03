@@ -38,8 +38,6 @@ SEO的なところ
 
 ## やること 優先度高い順
 * typescript
-* WP移行
-* UIを整える
 * RSS feed
 
 
