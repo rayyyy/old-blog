@@ -1,6 +1,6 @@
 import React from "react"
-import PostLink from "../components/molecules/post-link/post-link"
-import Layout from "../templates/layout/layout"
+import PostLink from "../../components/molecules/post-link/post-link"
+import Layout from "../../templates/layout/layout"
 
 const IndexPage = ({
   data: {
@@ -21,8 +21,11 @@ const IndexPage = ({
 export default IndexPage
 
 export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___updated_date] }) {
+  query($tag: String) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___updated_date] },
+      filter: { frontmatter: { tags: { in: [$tag] } } }
+    ) {
       edges {
         node {
           id

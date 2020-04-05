@@ -41,6 +41,9 @@ SEO的なところ
 * RSS feed
 * 時間をUTCからJSTにする
 * ソースコードを書けるようにしたい
+* ページ上でSEOタグのtitleなどを入れるようにする
+* sitemap
+* google analitycs
 
 
 ## やってみたいところ

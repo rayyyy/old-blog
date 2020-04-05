@@ -1,11 +1,11 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import "./header.sass"
+import styles from "./header.module.sass"
 
 const Header = ({ siteTitle }) => (
   <header>
-    <Link to="/" className="site-title">
+    <Link to="/" className={styles.title} >
       {siteTitle}
     </Link>
   </header>

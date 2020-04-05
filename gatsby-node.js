@@ -43,6 +43,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             fields {
               path
             }
+            frontmatter {
+              tags
+            }
           }
         }
       }
@@ -55,12 +58,28 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
+  // 記事作成
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-
     createPage({
       path: node.fields.path,
       component: blogPostTemplate,
-      context: {}, // additional data can be passed via context
+      context: {},
+    })
+  })
+
+  // タグ一覧ページ
+  const tags = result.data.allMarkdownRemark.edges.reduce((tags, edge) => {
+    const edgeTags = edge.node.frontmatter.tags
+    return edgeTags ? tags.concat(edgeTags) : tags
+  }, []).filter((x, i, self) => self.indexOf(x) === i)
+  const tagTemplate = path.resolve(`src/templates/tags/tags.js`)
+  tags.forEach(tag => {
+    createPage({
+      path: `/tags/${tag}`,
+      component: tagTemplate,
+      context: {
+        tag,
+      },
     })
   })
 }
