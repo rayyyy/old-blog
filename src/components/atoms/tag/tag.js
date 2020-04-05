@@ -1,8 +1,8 @@
 import React from "react"
-import "./tag.sass"
+import styles from "./tag.module.sass"
 
 const Tag = ({ name }) => (
-  <a href="/" className="tag">
+  <a href="/" className={styles.tag}>
     {name}
   </a>
 )

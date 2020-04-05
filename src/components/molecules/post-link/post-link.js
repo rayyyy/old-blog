@@ -1,28 +1,28 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import './post-link.sass'
+import styles from './post-link.module.sass'
 import Tags from '../tags/tags'
 
 const PostLink = ({ post }) => (
-  <div className="card">
+  <div className={styles.card}>
     <Link to={post.fields.path}>
-      <div className="header">
-        <div className="title">
+      <div className={styles.header}>
+        <div className={styles.title}>
           {post.frontmatter.title}
         </div>
-        <div className="date">
+        <div className={styles.date}>
           {post.frontmatter.updated_date}
         </div>
       </div>
-      <div className="main">
+      <div className={styles.main}>
         {post.excerpt}
       </div>
     </Link>
-    <div className="footer">
-      <div className="title">
+    <div className={styles.footer}>
+      <div className={styles.title}>
         タグ
         </div>
-      <div className="tags">
+      <div>
         <Tags tags={post.frontmatter.tags} />
       </div>
     </div>

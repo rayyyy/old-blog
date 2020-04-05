@@ -37,9 +37,11 @@ SEO的なところ
 [プラグイン45選](https://qiita.com/Takumon/items/da8347f81a9f021b637f#gatsby-plugin-robots-txt)
 
 ## やること 優先度高い順
-* 記事一覧改修
 * layout.sass以外は他に影響しない形にする
+* レスポンシブデザイン対応
+* tagを水色にする
 * RSS feed
+* 時間をUTCからJSTにする
 
 
 ## やってみたいところ
