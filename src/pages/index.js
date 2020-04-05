@@ -1,5 +1,5 @@
 import React from "react"
-import PostLink from "../components/molecules/post-link"
+import PostLink from "../components/molecules/post-link/post-link"
 import Layout from "../templates/layout/layout"
 
 const IndexPage = ({
@@ -27,8 +27,9 @@ export const pageQuery = graphql`
           id
           excerpt(pruneLength: 250)
           frontmatter {
-            updated_date(formatString: "MMMM DD, YYYY")
+            updated_date(formatString: "YYYY-MM-DD")
             title
+            tags
           }
           fields {
             path
