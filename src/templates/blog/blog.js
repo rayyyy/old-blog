@@ -12,17 +12,15 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-      <div>
-        <h1>{frontmatter.title}</h1>
-        <PostDate
-          published_date={frontmatter.published_date}
-          updated_date={frontmatter.updated_date}
-        ></PostDate>
-        <Tags tags={frontmatter.tags} />
-        <div
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </div>
+      <h1>{frontmatter.title}</h1>
+      <PostDate
+        published_date={frontmatter.published_date}
+        updated_date={frontmatter.updated_date}
+      ></PostDate>
+      <Tags tags={frontmatter.tags} />
+      <div
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </Layout>
   )
 }

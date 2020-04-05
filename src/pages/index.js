@@ -12,6 +12,7 @@ const IndexPage = ({
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
   return (
     <Layout>
+      <h1>記事一覧</h1>
       <div>{Posts}</div>
     </Layout>
   )
