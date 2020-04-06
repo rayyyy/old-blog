@@ -1,22 +1,17 @@
 import React from "react"
-import PostLink from "../components/molecules/post-link/post-link"
+import Posts from "../components/molecules/posts/posts"
 import Layout from "../templates/layout/layout"
 
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
   },
-}) => {
-  const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.updated_date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
-  return (
+}) => (
     <Layout>
       <h1>記事一覧</h1>
-      <div>{Posts}</div>
+      <Posts posts={edges} />
     </Layout>
-  )
-}
+)
 
 export default IndexPage
 
