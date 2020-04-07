@@ -37,11 +37,12 @@ SEO的なところ
 [プラグイン45選](https://qiita.com/Takumon/items/da8347f81a9f021b637f#gatsby-plugin-robots-txt)
 
 ## やること 優先度高い順
-* 時間をUTCからJSTにする
+* フッターにWPサイトを表示する
 * ページ上でSEOタグのtitleなどを入れるようにする
 * sitemap
 * google analitycs
 * search console
+* netlifycmsの時間をUTCからJSTにする（+9時間する）
 
 
 ## やってみたいところ
