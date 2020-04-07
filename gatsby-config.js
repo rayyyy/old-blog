@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://www.rainiero.com`,
     title: `Life Hack Engineer`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `人生を楽しむエンジニアのブログ。技術や組織の話など書いてます。`,
     author: `rayyyy`,
   },
   plugins: [
@@ -63,8 +63,8 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.published_date,
-                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.path,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.path,
                   custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })
@@ -78,9 +78,9 @@ module.exports = {
                     node {
                       excerpt
                       html
+                      fields { path }
                       frontmatter {
                         title
-                        slug
                         published_date
                       }
                     }
