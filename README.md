@@ -38,7 +38,6 @@ SEO的なところ
 
 ## やること 優先度高い順
 * 時間をUTCからJSTにする
-* ソースコードを書けるようにしたい
 * ページ上でSEOタグのtitleなどを入れるようにする
 * sitemap
 * google analitycs

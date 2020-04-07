@@ -42,6 +42,19 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-"
+            },
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
