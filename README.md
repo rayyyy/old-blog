@@ -43,6 +43,7 @@ SEO的なところ
 * ページ上でSEOタグのtitleなどを入れるようにする
 * sitemap
 * google analitycs
+* search console
 
 
 ## やってみたいところ
