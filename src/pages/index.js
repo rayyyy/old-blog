@@ -1,6 +1,7 @@
 import React from "react"
 import Posts from "../components/molecules/posts/posts"
 import Layout from "../templates/layout/layout"
+import SEO from "../components/organisms/seo"
 
 const IndexPage = ({
   data: {
@@ -8,6 +9,7 @@ const IndexPage = ({
   },
 }) => (
     <Layout>
+      <SEO title="Life Hack Engineer" />
       <h1>記事一覧</h1>
       <Posts posts={edges} />
     </Layout>
