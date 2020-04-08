@@ -37,12 +37,13 @@ SEO的なところ
 [プラグイン45選](https://qiita.com/Takumon/items/da8347f81a9f021b637f#gatsby-plugin-robots-txt)
 
 ## やること 優先度高い順
-* フッターにLAPRASをはる
 * ページ上でSEOタグのtitleなどを入れるようにする
+* OGP
 * sitemap
 * google analitycs
 * search console
 * リリースノートとblogのロードマップを作る
+* フッターにLAPRASをはる
 * netlifycmsの時間をUTCからJSTにする（+9時間する）
 
 
