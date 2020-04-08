@@ -5,8 +5,8 @@ import PostLink from "../post-link/post-link"
 
 const Posts = ({ posts }) => {
   const Posts = posts.map(post => (
-    <div className={styles.post}>
-      <PostLink key={post.node.id} post={post.node} />
+    <div key={post.node.id} className={styles.post}>
+      <PostLink post={post.node} />
     </div>
   ))
 

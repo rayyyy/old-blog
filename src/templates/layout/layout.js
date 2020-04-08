@@ -10,6 +10,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../../components/organisms/header/header"
+import Footer from "../../components/organisms/footer/footer"
+import Image from "../../components/atoms/image"
 import 'typeface-lato'
 import './layout.sass'
 
@@ -29,10 +31,8 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className="content">
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}
-        </footer>
       </div>
+      <Footer />
     </>
   )
 }
