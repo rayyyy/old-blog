@@ -42,6 +42,7 @@ SEO的なところ
 * sitemap
 * google analitycs
 * search console
+* リリースノートとblogのロードマップを作る
 * netlifycmsの時間をUTCからJSTにする（+9時間する）
 
 
