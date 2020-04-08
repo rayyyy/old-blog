@@ -1,6 +1,7 @@
 import React from "react"
 import Posts from "../../components/molecules/posts/posts"
 import Layout from "../../templates/layout/layout"
+import { graphql } from 'gatsby'
 
 const IndexPage = ({
   data: {

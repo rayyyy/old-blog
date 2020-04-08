@@ -8,10 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Header from "../../components/organisms/header/header"
 import Footer from "../../components/organisms/footer/footer"
-import Image from "../../components/atoms/image"
 import 'typeface-lato'
 import './layout.sass'
 
