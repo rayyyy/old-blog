@@ -18,26 +18,19 @@ SSL接続で繋げればいいとのこと。
 <https://stackoverflow.com/questions/42386975/heroku-postgresql-with-google-datastudio>\
 [https://qiita.com/brewer_/items/fb1b1f2af3af273b5e3e](https://qiita.com/brewer_/items/fb1b1f2af3af273b5e3e)
 
-\`\``bash{outputLines: 2}
-
-openssl req -newkey rsa:2048 -nodes -keyout client.key -x509 -days 365 -out client.crt
-
-\`\``
-
 common nameはHerokuのPostgreSQLのhostを書いて証明書を作成してください。
 
-
+```bash{outputLines: 2}
+openssl req -newkey rsa:2048 -nodes -keyout client.key -x509 -days 365 -out client.crt
+```
 
 そして、下記を実行して、herokuのssl証明書を取得してきます。
 
-\`\``bash{outputLines: 3}
-
+```bash{outputLines: 3}
 curl -O https://raw.githubusercontent.com/thusoy/postgres-mitm/master/postgres_get_server_cert.py
-
 python postgres_get_server_cert.py {HerokuのPostgreSQLのhost}:{port} > heroku.crt
+```
 
-\`\``
-
-\`heroku.crt\`、 \`client.crt\`、\`client.key\`が出来上がったと思います。
+`heroku.crt`、 `client.crt`、`client.key`が出来上がったと思います。
 
 これをGoogle Data StudioのSSL接続の部分にアップロードすれば認証が通ると思います。
